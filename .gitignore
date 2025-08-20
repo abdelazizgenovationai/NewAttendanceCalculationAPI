@@ -1,0 +1,72 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.Generated.cs
+*.Designer.cs
+
+# Build results
+bin/
+obj/
+out/
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Visual Studio cache and temporary files
+.vs/
+.vscode/
+*.vsp
+*.vsscc
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Logs
+*.log
+*.tlog
+
+# Rider IDE
+.idea/
+
+# JetBrains Rider caches
+*.sln.iml
+
+# ASP.NET / Web artifacts
+wwwroot/
+*.dbmdl
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dotnet tool manifest
+.dotnet/
+
+# Local configuration files
+appsettings.Local.json
+appsettings.Development.json
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Others
+*.cache
+*.pdb
+*.exe
+*.dll
+*.so
+*.dylib
