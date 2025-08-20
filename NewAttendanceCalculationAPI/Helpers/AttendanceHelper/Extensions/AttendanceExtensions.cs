@@ -5,13 +5,13 @@ namespace NewAttendanceCalculationAPI.Helpers.AttendanceHelper.Extensions
 {
     public static class AttendanceExtensions
     {
-       public static bool OnlyShiftsThatStartTodayAndEndToday(this List<ShiftDto> shifts)
+        public static bool OnlyShiftsThatStartTodayAndEndToday(this List<ShiftDto> shifts)
         {
             var yesterday = DateTime.Now.AddDays(-1).Date;
             var today = DateTime.Now.Date;
-            var result= shifts.Any(shift =>
+            var result = shifts.Any(shift =>
             DateTime.Parse(shift.StartDateTime).Date == today &&
-            DateTime.Parse(shift.EndDateTime).Date == today );
+            DateTime.Parse(shift.EndDateTime).Date == today);
 
             return result;
 
@@ -58,6 +58,20 @@ namespace NewAttendanceCalculationAPI.Helpers.AttendanceHelper.Extensions
             {
                 throw new Exception($"Unexpected error while parsing date/time '{date} {time}'", ex);
             }
+        }
+
+
+
+        /// <summary>
+        /// Returns a new TimeSpan with milliseconds set to zero.
+        /// </summary>
+        public static TimeSpan StripMilliseconds(this TimeSpan? timeSpan)
+        {
+            return new TimeSpan(
+                timeSpan.Value. Hours,
+                timeSpan.Value.Minutes,
+                timeSpan.Value.Seconds
+            );
         }
 
     }
